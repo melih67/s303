@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>On se bouge !</title>
   <link rel="stylesheet" href="assets/css/master.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
 </head>
 
 <body>
@@ -27,7 +30,14 @@
   <main id="histoire">
     <section class="chapter" id="preambule">
       <div class="chapter-title__container">
-        <h1>On s'bouge !</h1>
+        <h1 class="accueil-title" data-aos="fade-down">Vert'Horizon</h1>
+        <h3 class="accueil-title__sub">En quoi les transport en commun sont-ils ?</h3>
+        <p class="accueil-title__mouse">Glissez pour commencez votre expérience</p>
+        <div class="scroll-downs">
+          <div class="mousey" data-aos="fade-up">
+            <div class="scroller"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -39,7 +49,7 @@
       </div>
 
       <article class="section">
-        <h3 class="section__title">
+        <h3 class="section__title animate__bounce">
 
         </h3>
       </article>
@@ -111,6 +121,11 @@
   </main>
 
   <script type="module" src="assets/js/main.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>
