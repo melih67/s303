@@ -1,6 +1,10 @@
 :root {
   --color-intro: #FED767;
+  --color-intro-text: #FF6527;
   --color-chapter_1: #87CEEB;
+  --color-chapter_1-text: #013743;
   --color-chapter_2: #FFA07A;
+  --color-chapter_2-text: #501700;
   --color-chapter_3: #6BE16B;
+  --color-chapter_3-text: #014901;
 }
