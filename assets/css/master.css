@@ -1,0 +1,81 @@
+@import '_reset.css';
+
+@import '_globals.css';
+@import '_utils.css';
+
+@import '_typography.css';
+
+@import '_chapter-1.css';
+@import '_chapter-2.css';
+@import '_chapter-3.css';
+
+
+main {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.section, .chapter-title__container {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10vh;
+  left: 2em;
+  width: .2em;
+  height: 80vh;
+}
+.side-nav__link {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1em;
+  transition: width .23s ease-in-out;
+  background-color: white;
+  border: solid .1em black;
+  border-radius: 50%;
+}
+.side-nav__link:hover {
+  width: 3em;
+}
+.side-nav__link-text {
+  position: absolute;
+  left: 150%;
+  overflow: hidden;
+  width: 0;
+}
+.side-nav__link:hover>.side-nav__link-text,
+.side-nav--start .side-nav__link-text {
+  width: 150%;
+}
+
+.chapter {
+  display: grid;
+  grid-auto-rows: minmax(100vh, auto);
+}
+.chapter:nth-child(1) {
+  background-color: var(--color-chapter_1);
+}
+.chapter:nth-child(2) {
+  background-color: var(--color-chapter_2);
+}
+.chapter:nth-child(3) {
+  background-color: var(--color-chapter_3);
+}
+.section:nth-of-type(1) {
+  background-color: #fff2;
+}
+.section:nth-of-type(2) {
+  background-color: #fff4;
+}
+.section:nth-of-type(3) {
+  background-color: #fff6;
+}
