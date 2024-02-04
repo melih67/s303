@@ -30,6 +30,7 @@ main {
   left: 2em;
   width: .2em;
   height: 80vh;
+  background-color: white;
 }
 .side-nav__link {
   aspect-ratio: 1/1;
