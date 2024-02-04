@@ -88,73 +88,73 @@ main {
 }
 
 .accueil-title{
-  text-align: center;
   margin-top: 9rem;
   color: var(--color-intro-text);
-}
-
-.accueil-title__sub{
   text-align: center;
-  color: var(--color-intro-text);
+}
+.accueil-title__sub{
   margin-top: 2rem;
   font-size: 2rem;
   font-weight: 700;
-}
-
-
-.accueil-title__mouse{
+  color: var(--color-intro-text);
   text-align: center;
-    color: var(--color-intro-text);
-    position: relative;
-    top: 28rem;
-    font-size: 1.3rem;
-    font-weight: 700;
+}
+.accueil-title__mouse{
+  position: relative;
+  top: 28rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-intro-text);
+  text-align: center;
 }
 
-
-.scroll-downs {
-  position: absolute;
-  right: 0;
-  bottom: 5em;
-  left: 0;
-  margin: auto;
-  width: 34px;
-  height: 55px;
-}
-
-.mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid var(--color-intro-text);
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: var(--color-intro-text);
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15, .41, .69, .94);
-  animation-iteration-count: infinite;
-}
 
 @keyframes scroll {
   0% {
     opacity: 0;
   }
 
-  10% {
-    transform: translateY(0);
-    opacity: 1;
+10% {
+  opacity: 1;
+  transform: translateY(0);
   }
 
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
+100% {
+  opacity: 0;
+  transform: translateY(15px);
   }
+}
+.scroll-downs {
+  mix-blend-mode: multiply;
+  position: absolute;
+  bottom: 5em;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  width: 34px;
+  height: 55px;
+  margin: auto;
+  transition: opacity .3s ease-in-out;
+}
+.scrolling {
+  opacity: 0;
+}
+.mousey {
+  opacity: 0.75;
+  box-sizing: content-box;
+  width: 3px;
+  height: 35px;
+  padding: 10px 15px;
+  border: 2px solid var(--color-intro-text);
+  border-radius: 25px;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+  animation-iteration-count: infinite;
+  background-color: var(--color-intro-text);
+  border-radius: 25%;
 }
