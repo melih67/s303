@@ -9,7 +9,6 @@
 @import '_chapter-2.css';
 @import '_chapter-3.css';
 
-
 main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -43,7 +42,9 @@ main {
   border: solid .1em black;
   border-radius: 50%;
 }
-.side-nav__link:hover {
+.side-nav__link:hover,
+.side-nav__link[aria-current="step"],
+.side-nav--intro > .side-nav__link{
   width: 3em;
 }
 .side-nav__link-text {
@@ -51,9 +52,11 @@ main {
   left: 150%;
   overflow: hidden;
   width: 0;
+  transition: width .23s ease-in-out;
+  transition-delay: .23s;
 }
 .side-nav__link:hover>.side-nav__link-text,
-.side-nav--start .side-nav__link-text {
+.side-nav--intro .side-nav__link-text {
   width: 150%;
 }
 
@@ -62,12 +65,15 @@ main {
   grid-auto-rows: minmax(100vh, auto);
 }
 .chapter:nth-child(1) {
-  background-color: var(--color-chapter_1);
+  background-color: var(--color-intro);
 }
 .chapter:nth-child(2) {
-  background-color: var(--color-chapter_2);
+  background-color: var(--color-chapter_1);
 }
 .chapter:nth-child(3) {
+  background-color: var(--color-chapter_2);
+}
+.chapter:nth-child(4) {
   background-color: var(--color-chapter_3);
 }
 .section:nth-of-type(1) {
