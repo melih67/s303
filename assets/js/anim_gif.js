@@ -1,12 +1,7 @@
-var params = {
+var animation = bodymovin.loadAnimation({
   container: document.getElementById("lottie"),
   renderer: "svg",
   loop: true,
   autoplay: true,
-  animationData: animationData,
-  path: "./data.json",
-};
-
-var anim;
-
-anim = lottie.loadAnimation(params);
+  path: "anim/s1a1/lampe.json",
+});
