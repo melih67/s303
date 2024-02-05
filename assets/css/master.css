@@ -88,6 +88,9 @@ main {
   text-transform: uppercase;
 }
 
+.section {
+  padding: 4.5em;
+}
 .section:nth-of-type(1) {
   background-color: #fff2;
 }
@@ -135,6 +138,15 @@ main {
   animation: scroll 2.2s cubic-bezier(.15, .41, .69, .94) infinite;
   background-color: var(--color-intro-text);
   border-radius: 25%;
+}
+
+.fake-img {
+  display: block;
+  background-color: chocolate;
+}
+.illu-chapzz {
+  aspect-ratio: 3 / 2;
+  min-width: 35em;
 }
 
 
