@@ -41,6 +41,7 @@
           </div>
         </div>
       </div>
+      
     </section>
 
     <section class="chapter" id="problemes">
@@ -121,18 +122,29 @@
         </div>
       </article>
 
-      <article class="section">
-        <div>
+      <article class="section row">
+        <div class="quizz">
           <span class="section__title">
             Les 3 moyens de transports
           </span>
-          <ul>
-            <li>Afficher le pourcentage pour les voitures</li>
-            <li>Afficher le pourcentage pour les bus</li>
-            <li>Afficher le pourcentage pour les scooters</li>
-          </ul>
+          <div class="col quizz-buttons"> 
+            <div>    
+            <input type="radio" class="quizz-buttons__input" id="huey" name="drone" value="huey" checked />
+            <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
+            </div>
+            <div>
+            <input type="radio" class="quizz-buttons__input" id="huey" name="drone" value="huey" checked />
+            <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
+            </div>
+            <div>
+              <input type="radio" class="quizz-buttons__input" id="huey" name="drone" value="huey" checked />
+            <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
+            </div>
+          </div>
         </div>
-        <div></div><!--graph-->
+        <div class="chart-js">
+          test
+        </div><!--graph-->
       </article>
 
       <article class="section">
@@ -246,7 +258,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
   <script src="assets/js/anim_gif.js" defer></script>
   <script>
     AOS.init();

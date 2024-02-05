@@ -136,3 +136,14 @@ main {
   background-color: var(--color-intro-text);
   border-radius: 25%;
 }
+
+
+.section__title{
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.chart-js{
+  display: block;
+  width: 50%;
+}
