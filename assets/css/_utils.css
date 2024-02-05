@@ -1,3 +1,7 @@
+.abs {
+  position: absolute;
+}
+
 .row {
   display: flex;
 }

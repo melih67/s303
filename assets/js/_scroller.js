@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   for (const section of chapters) {
     observer.observe(section);
   }
-  story.addEventListener('wheel', () => {
+  story.addEventListener('scroll', () => {
     scroller.classList.add('scrolling');
-    setTimeout(() => {
-      if (Date.now() - lastScroll > 15000) scroller.classList.remove('scrolling');
-    }, 15000);
     lastScroll = Date.now();
   });
+  setInterval(() => {
+    if (Date.now() - lastScroll > 15000) scroller.classList.remove('scrolling');
+  }, 5000);
 });
