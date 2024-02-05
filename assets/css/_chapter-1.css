@@ -1,0 +1,14 @@
+.graph-s1a2{
+    height: 45rem !important;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.para--top{
+    margin-top: 3rem;
+    width: 75%;
+}
+
+.text-content{
+    margin-top: 8rem;
+}
