@@ -148,3 +148,14 @@ main {
   aspect-ratio: 3 / 2;
   min-width: 35em;
 }
+
+
+.section__title{
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.chart-js{
+  display: block;
+  width: 50%;
+}
