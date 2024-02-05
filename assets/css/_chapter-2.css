@@ -1,12 +1,13 @@
 .quizz{
-    margin-top: 4rem;
-    margin-left: 6rem;
+    margin-top: 6rem;
+    margin-left: 3rem;
     min-width: 50%;
 }
 
 .quizz-buttons{
     margin-top: 6rem;
     gap: 3rem;
+    margin-right: 3rem;
 }
 
 

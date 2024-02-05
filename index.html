@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>On se bouge !</title>
+  <title>Vert'Horizon - On se bouge</title>
   <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="icon" href="./images/logo.png?v=2" type="image/x-icon">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" defer></script>
+
 </head>
 
 <body>
@@ -124,8 +127,8 @@
 
       <article class="section row">
         <div class="quizz">
-          <span class="section__title">
-            Les 3 moyens de transports
+          <span class="section__title" >
+            Les 3 moyens de <br>transports
           </span>
           <div class="col quizz-buttons"> 
             <div>    
@@ -141,10 +144,10 @@
             <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
             </div>
           </div>
-        </div>
-        <div class="chart-js">
-          test
-        </div><!--graph-->
+        </div> 
+            <div id="chart-container" style="height: 70vh" width="70vw">
+              <canvas id="chart" style="display: block; box-sizing: border-box; height: 750px; width: 600px;"></canvas>
+            </div><!--graph-->
       </article>
 
       <article class="section">

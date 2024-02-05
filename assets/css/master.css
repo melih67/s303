@@ -48,6 +48,8 @@ main {
   width: 0;
   transition: width .23s ease-in-out;
   transition-delay: .23s;
+  color: white;
+  font-weight: 500;
 }
 .side-nav__link:hover>.side-nav__link-text,
 .side-nav--intro .side-nav__link-text {
