@@ -17,3 +17,7 @@ function load() {
 }
 
 var timer = setInterval(load, 300);
+
+let blok2 = document.querySelector(".lej");
+blok2.classList.add("lej2");
+blok2.classList.remove("lej");

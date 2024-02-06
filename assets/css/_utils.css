@@ -41,3 +41,7 @@
 .gap-big{
   gap: 70px,
 }
+
+.relative{
+  position: relative;
+}

@@ -138,11 +138,11 @@
             <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
             </div>
             <div>
-            <input type="radio" class="quizz-buttons__input" id="bus"  value="bus" name ="transport" checked />
+            <input type="radio" class="quizz-buttons__input" id="bus"  value="bus" name ="transport"  />
             <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
             </div>
             <div>
-              <input type="radio" class="quizz-buttons__input" id="scooters"  value="scooters"  name ="transport" checked />
+              <input type="radio" class="quizz-buttons__input" id="scooters"  value="scooters"  name ="transport"  />
             <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
             </div>
           </div>
@@ -234,27 +234,28 @@
             <div></div><!--graph-->
           </div>
       </article>
-      <article class="section">
+      <article class="section row ai-c">
         <div>
           <span class="section__title">
             Les prévisions
           </span>
-          <p>
-            Les perspectives d'avenir sont encourageantes : une transition vers
-            des modes de transport plus écologiques. L'augmentation de
-            l'utilisation des véhicules électriques et des solutions de mobilité
+          <p class="para--top fs-4">
+            <b>Les perspectives</b> d'avenir sont encourageantes : une transition vers
+            des modes de transport plus écologiques.<br>
+            <b>L'augmentation</b> de l'utilisation des véhicules électriques et des solutions de mobilité
             partagée préfigure une réduction significative de la pollution urbaine.
           </p>
-          <p>
-            Une période propice pour contribuer activement à l'élaboration d'un futur durable.
+          <p class="para--top fs-4">
+            <b>Une période</b> propice pour contribuer activement à l'élaboration d'un futur durable.
           </p>
         </div>
         <div>
-          <div>
-            <button type="button"><span lass="data">2024</span></button>
-            <button type="button"><span lass="data">2050</span></button>
+          <div class="row jc-c gap-small date">
+            <button type="button" class="actuelle"><span lass="data">2024</span></button>
+            <button type="button" class="futur"><span lass="data">2050</span></button>
           </div>
-          <div></div><!--graph-->
+          <div id="s3a4" class="graph-s3a4"></div>
+          <div id="s3a4-1" class="graph-s3a4 none"></div><!--graph-->
         </div>
       </article>
     </section>

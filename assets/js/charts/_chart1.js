@@ -1,6 +1,6 @@
 const dataVoiture = [4, 11, 26, 21, 20, 11, 4, 3];
-const dataBus = [4, 17, 56, 21, 30, 11, 4, 8];
-const dataScooter = [4, 11, 16, 23, 5, 1, 14, 23];
+const dataBus = [3, 14, 25, 23, 26, 19, 4, 3];
+const dataScooter = [9, 18, 26, 23, 10, 5, 4, 1];
 const colorVoiture = "#ff7037";
 const colorBus = "#87CEEB";
 const colorScooter = "#FED767";

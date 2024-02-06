@@ -165,3 +165,7 @@ main {
 .left{
   margin-left: 4rem;
 }
+
+.none{
+  display: none;
+}
