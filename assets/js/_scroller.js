@@ -3,29 +3,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".side-nav__link");
   const story = document.getElementById("histoire");
   const chapters = document.querySelectorAll(".chapter");
+  const blockedSection = document.getElementById('blocked-section');
+  const steppedAnimation = document.getElementById('stepped-animation');
   let lastScroll = 0;
   const options = {
     root: story,
     threshold: 0.1,
   };
 
-  const observer = new IntersectionObserver((sections) => {
+  const chaptersObserver = new IntersectionObserver((sections) => {
     sections.forEach((section) => {
       if (section.isIntersecting) {
         const id = "#" + section.target.id;
-        section.target.dataset.visited
-          ? null
-          : section.target.classList.add("visited");
-        history.replaceState(null, "", window.location.href.split("#")[0] + id);
-        for (const link of navLinks) {
-          link.ariaCurrent = link.getAttribute("href") === id ? "step" : null;
+        if (!section.target.dataset.visited) {
+          section.target.dataset.visited = "yes";
+          section.target.classList.add("visited");
         }
-      }
+          history.replaceState(null, "", window.location.href.split("#")[0] + id);
+          for (const link of navLinks) {
+            link.ariaCurrent = link.getAttribute("href") === id ? "step" : null;
+          }
+        }
     });
   }, options);
 
+  let changeStep = function(ev){
+    const newStep = parseInt(steppedAnimation.dataset.step) + 1;
+    steppedAnimation.dataset.step = newStep;
+    blockedSection.classList.add('step' + newStep);
+    if (newStep == 3) {
+      story.style.overflow = "scroll";
+      blockedSection.removeEventListener('wheel', changeStep);
+
+    }
+  }
+  const blockedObserver = new IntersectionObserver((article) => {
+    article = article[0];
+    if (article.isIntersecting && !article.target.dataset.visited) {
+      article.target.dataset.visited = "yes";
+      story.style.overflow = "hidden";
+      article.target.scrollIntoView();
+      article.target.addEventListener('wheel', changeStep);
+    }
+  }, options);
+
+  blockedObserver.observe(blockedSection);
   for (const section of chapters) {
-    observer.observe(section);
+    chaptersObserver.observe(section);
   }
   story.addEventListener("scroll", () => {
     scroller.classList.add("scrolling");
