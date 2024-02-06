@@ -28,3 +28,16 @@
 .text-c {
   text-align: center;
 }
+
+
+.gap-small{
+  gap: 10px;
+}
+
+.gap-mid{
+  gap: 40px;
+}
+
+.gap-big{
+  gap: 70px,
+}

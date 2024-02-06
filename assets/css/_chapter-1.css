@@ -1,7 +1,7 @@
 .graph-s1a2{
-    height: 45rem !important;
+    height: 30rem !important;
     overflow: hidden;
-    object-fit: contain;
+    width: 50rem;
 }
 
 .para--top{
@@ -11,4 +11,31 @@
 
 .text-content{
     margin-top: 8rem;
+}
+
+
+.loading {
+  border-radius:10px;
+  height:20px;
+  width:200px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mP4////P2Iww6hC+ioEANRujhxRAco4AAAAAElFTkSuQmCC');
+  background-repeat:no-repeat;
+  background-size: 0 100%;
+  margin: 50px auto;
+  -webkit-transition: background-size 0.6s ease-in;
+  -moz-transition: background-size 0.6s ease-in;
+  -ms-transition: background-size 0.6s ease-in;
+  -o-transition: background-size 0.6s ease-in;
+  transition: background-size 0.6s ease-in;
+  border: 1px solid white;
+}
+
+
+.section__text{
+    width: 60%;
+}
+
+.chart2--style{
+    width: 500px !important;
+    height: 500px !important;
 }

@@ -47,7 +47,7 @@ main {
   overflow: hidden;
   width: 0;
   transition: width .23s ease-in-out;
-  transition-delay: .23s;
+  transition-delay: .23s; 
   color: white;
   font-weight: 500;
 }
@@ -160,4 +160,8 @@ main {
 .chart-js{  
   display: block;
   width: 50%;
+}
+
+.left{
+  margin-left: 4rem;
 }

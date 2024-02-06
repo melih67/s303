@@ -1,3 +1,45 @@
+const dataVoiture = [4, 11, 26, 21, 20, 11, 4, 3];
+const dataBus = [4, 17, 56, 21, 30, 11, 4, 8];
+const dataScooter = [4, 11, 16, 23, 5, 1, 14, 23];
+const colorVoiture = "#ff7037";
+const colorBus = "#87CEEB";
+const colorScooter = "#FED767";
+
+function updateChartData() {
+  const selectedTransport = document.querySelector(
+    'input[name="transport"]:checked'
+  ).value;
+
+  let newData;
+  let newColors;
+  switch (selectedTransport) {
+    case "voitures":
+      newData = dataVoiture;
+      newColors = colorVoiture;
+      break;
+    case "bus":
+      newData = dataBus;
+      newColors = colorBus;
+      break;
+    case "scooters":
+      newData = dataScooter;
+      newColors = colorScooter;
+      break;
+    default:
+      newData = []; // Par défaut, aucun donnée si rien n'est sélectionné
+  }
+
+  // Mettre à jour les données du graphique
+  chart.data.datasets[0].data = newData;
+  chart.data.datasets[0].backgroundColor = newColors;
+  chart.update(); // Rafraîchir le graphique
+}
+
+// Attacher les écouteurs d'événements aux boutons radio pour appeler updateChartData lors d'un changement
+document.querySelectorAll('input[name="transport"]').forEach((button) => {
+  button.addEventListener("change", updateChartData);
+});
+
 const data = {
   labels: [
     "0 à 1km",
@@ -12,8 +54,8 @@ const data = {
   datasets: [
     {
       label: "% de voiture utilisé en fonction de la distance",
-      data: [4, 11, 26, 21, 20, 11, 4, 3],
-      backgroundColor: "#ff7037",
+      data: dataVoiture,
+      backgroundColor: colorVoiture,
     },
   ],
 };
@@ -41,5 +83,5 @@ const chart = new Chart(ctx, {
       },
     },
   },
-  plugins: [ChartDataLabels], // Assurez-vous d'enregistrer le plugin ici
+  plugins: [ChartDataLabels],
 });
