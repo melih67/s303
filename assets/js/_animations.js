@@ -1,4 +1,4 @@
-let percent = 0;
+var percent = 0;
 function load() {
   percent += Math.floor(Math.random() * (20 - 5)) + 10;
   if (percent >= 100) {
@@ -9,4 +9,4 @@ function load() {
     percent + "% 100%";
 }
 
-let timer = setInterval(load, 300);
+var timer = setInterval(load, 300);
