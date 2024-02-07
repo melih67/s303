@@ -29,3 +29,11 @@ var animation = bodymovin.loadAnimation({
   autoplay: true,
   path: "anim/s3a4-1/data.json",
 });
+
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("s3a1"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "anim/s3a1/data.json",
+});
