@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
     threshold: 0.1,
   };
 
+  let changeStep = function(ev){
+    const newStep = parseInt(steppedAnimation.dataset.step) + 1;
+    steppedAnimation.dataset.step = newStep;
+    blockedSection.classList.add('step' + newStep);
+    if (newStep == 3) {
+      story.style.overflowY = "scroll";
+      blockedSection.removeEventListener('wheel', changeStep);
+
+    }
+  }
+
   const chaptersObserver = new IntersectionObserver((sections) => {
     sections.forEach((section) => {
       if (section.isIntersecting) {
@@ -27,21 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, options);
 
-  let changeStep = function(ev){
-    const newStep = parseInt(steppedAnimation.dataset.step) + 1;
-    steppedAnimation.dataset.step = newStep;
-    blockedSection.classList.add('step' + newStep);
-    if (newStep == 3) {
-      story.style.overflow = "scroll";
-      blockedSection.removeEventListener('wheel', changeStep);
-
-    }
-  }
   const blockedObserver = new IntersectionObserver((article) => {
     article = article[0];
     if (article.isIntersecting && !article.target.dataset.visited) {
       article.target.dataset.visited = "yes";
-      story.style.overflow = "hidden";
+      story.style.overflowY = "hidden";
       article.target.scrollIntoView();
       article.target.addEventListener('wheel', changeStep);
     }
