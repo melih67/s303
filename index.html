@@ -137,15 +137,15 @@
           <div class="col quizz-buttons">
             <div>
               <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport" checked />
-              <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
+              <label  for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
             </div>
             <div>
             <input type="radio" class="quizz-buttons__input" id="bus"  value="bus" name ="transport" checked />
-            <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
+            <label  for="bus" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
             </div>
             <div>
               <input type="radio" class="quizz-buttons__input" id="scooters"  value="scooters"  name ="transport" checked />
-            <label class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
+            <label for="scooters" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
             </div>
           </div>
         </div>
@@ -179,32 +179,38 @@
         </h2>
       </div>
 
-      <article class="section">
+      <article class="section row ai-c"> 
+      <div class="section__text">
         <span class="section__title">
           Les solutions possibles
         </span>
-        <div id="s3a1" class="graph-s3a4"></div><!--graph-->
-        <p>
+        <p class="para--top fs-4">
           Les vélos et trottinettes électriques ? Ils sont partout maintenant,
           et ça augmente chaque année. Quand on est jeune et qu&rsquo;on habite
           en ville, c'est top : on évite les bouchons, on se gare facile, et on
           arrive sans être en âge. En plus, c'est bon pour la planète.
           <b>C'est la liberté, sans la pollution.</b>
         </p>
+        </div>
+          <div id="s3a1" class="graph-s3a4"></div><!--graph-->
       </article>
 
-      <article class="section">
-        <span class="section__title">
-          La sobriété énergétique
-        </span>
+      <article class="section row ai-c gap-big">
         <div class="chart-js">
           <canvas id="chart3" class=""></canvas>
         </div><!--graph-->
+        <div class="section__text">
+        <span class="section__title">
+          La sobriété énergétique
+        </span>
+        <p class="para--top fs-4">
         <b>La révolution est en marche :</b>
         les ventes de voitures électriques ontgrimpé de 22%. Elles représentent
         plus qu'une tendance. C'est une voie vers un transport moins polluant
         et une conduite plus économique.
         <b>C'est l'avenir sur quatre roues.</b>
+        </p>
+        </div>
       </article>
 
       <article class="section">
