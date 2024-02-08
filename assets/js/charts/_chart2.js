@@ -1,16 +1,24 @@
 const data = {
   labels: [
     "Transport",
-    "Batiments",
+    "Bâtiments",
     "Agriculture",
     "Industrie",
     "Déchets",
-    "Production d'énérgie",
+    "Production d'énergie",
   ],
   datasets: [
     {
-      label: "Consomation :  %",
+      label: "Consommation :  %",
       data: [29, 19, 19, 18, 4, 11],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.8)",
+        "rgba(54, 162, 235, 0.8)",
+        "rgba(255, 206, 86, 0.8)",
+        "rgba(75, 192, 192, 0.8)",
+        "rgba(153, 102, 255, 0.8)",
+        "rgba(255, 159, 64, 0.8)",
+      ],
     },
   ],
 };
@@ -24,16 +32,33 @@ const chart = new Chart(ctx, {
     plugins: {
       title: {
         display: true,
-        text: "Répartition des émissions de CO2 par secteur",
+        text: "Répartition des émissions de CO2 par secteur en %",
         font: {
-          size: 18,
+          size: 25,
           family: "Montserrat",
         },
       },
       legend: {
         display: true,
         position: "right",
+        labels: {
+          font: {
+            size: 18,
+            family: "Montserrat",
+          },
+        },
+      },
+      datalabels: {
+        color: "#fff",
+        font: {
+          weight: "bold",
+          size: 16,
+        },
+        formatter: (value, context) => {
+          return `${value}%`;
+        },
       },
     },
   },
+  plugins: [ChartDataLabels], // Assurez-vous d'enregistrer le plugin ici
 });

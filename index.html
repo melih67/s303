@@ -11,8 +11,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
-    defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" defer></script>
 
 </head>
 
@@ -24,8 +23,7 @@
     <a class="side-nav__link row ai-c" title="CHAPITRE 1 : Problèmes énergetiques en France" href="#problemes">
       <span class="side-nav__link-text">Problemes</span>
     </a>
-    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques"
-      href="#impacts">
+    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques" href="#impacts">
       <span class="side-nav__link-text">Impacts</span>
     </a>
     <a class="side-nav__link row ai-c" title="CHAPITRE 3 : Les solutions et les prévisions" href="#solutions">
@@ -114,19 +112,29 @@
         </h2>
       </div>
 
-      <article class="section" id="blocked-section">
+      <article class="section blocked-section" id="blocked-section">
         <span class="section__title">
           Les moyens de transports
         </span>
-        <div id="stepped-animation" data-step="0"></div><!--graph-->
-        <div>
-          <span class="data data--big">80%</span>
-          <p>
-            Pour info, la voiture est le mode de transport quotidien le plus répandu
-          </p>
+        <div class="blocked-container" id="stepped-animation" data-step="0">
+          <div class="blocked blocked1">
+            <img src="images/voiture.png" alt="Voiture">
+            <p class="data">82%</p>
+          </div>
+          <div class="blocked blocked2">
+            <img src="images/bus.png" alt="Bus">
+            <p class="data">13%</p>
+          </div>
+          <div class="blocked blocked3">
+            <img src="images/velo.png" alt="Velo">
+            <p class="data">1%</p>
+          </div>
         </div>
+        <p class="fs-4 chap2-s1-text">
+          Pour info, la voiture est le mode de transport quotidien le plus répandu.
+          Elle est utilisée dans <span class="daa">plus de 4 tajets sur 5</span>, c'est énorme.
+        </p>
       </article>
-
       <article class="section row">
         <div class="quizz">
           <span class="section__title">
@@ -134,19 +142,16 @@
           </span>
           <div class="col quizz-buttons">
             <div>
-              <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport"
-                checked />
-              <label for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les
-                voitures</label>
+              <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport" checked />
+              <label for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
             </div>
             <div>
-              <input type="radio" class="quizz-buttons__input" id="bus" value="bus" name="transport" />
+              <input type="radio" class="quizz-buttons__input" id="bus" value="bus" name="transport" checked />
               <label for="bus" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
             </div>
             <div>
-              <input type="radio" class="quizz-buttons__input" id="scooters" value="scooters" name="transport" />
-              <label for="scooters" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les
-                scooters</label>
+              <input type="radio" class="quizz-buttons__input" id="scooters" value="scooters" name="transport" checked />
+              <label for="scooters" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
             </div>
           </div>
         </div>
@@ -170,10 +175,7 @@
           </p>
         </div>
         <div>
-          <iframe width="1090" height="615" src="https://www.youtube.com/embed/mL4sOQPKQss?si=qOou6TIiOTIsqN3e"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe width="1090" height="615" src="https://www.youtube.com/embed/mL4sOQPKQss?si=qOou6TIiOTIsqN3e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </article>
     </section>
@@ -285,9 +287,9 @@
           <a href="#" target="_blank" class="link-source">Source</a>
         </div>
         <div class="col jc-c ai-c">
-          <img src="./images/graph_melih.png" alt="Graphique réalisé" class="img--graph">
-          <p class="mt-1">Acikoz Melih</p>
-          <a href="#" target="_blank" class="link-source">Source</a>
+          <img src="./images/velo_graph.png" alt="Graphique réalisé" class="img--graph">
+          <p class="mt-1">Garrigues Maël</p>
+          <a href="https://fr.statista.com/statistiques/713344/nombre-velos-assistance-electrique-vendus-union-europeenne/" target="_blank" class="link-source">Source</a>
         </div>
         <div class="col jc-c ai-c">
           <img src="./images/graph_melih.png" alt="Graphique réalisé" class="img--graph">
