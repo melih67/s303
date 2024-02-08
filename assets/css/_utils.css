@@ -55,3 +55,17 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.mt-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+a{
+  text-decoration: none;
+}

@@ -9,7 +9,7 @@ const data = {
   ],
   datasets: [
     {
-      label: "%",
+      label: "Consomation :  %",
       data: [29, 19, 19, 18, 4, 11],
     },
   ],
