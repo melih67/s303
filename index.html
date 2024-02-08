@@ -11,8 +11,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
-    defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" defer></script>
 
 </head>
 
@@ -24,8 +23,7 @@
     <a class="side-nav__link row ai-c" title="CHAPITRE 1 : Problèmes énergetiques en France" href="#problemes">
       <span class="side-nav__link-text">Problemes</span>
     </a>
-    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques"
-      href="#impacts">
+    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques" href="#impacts">
       <span class="side-nav__link-text">Impacts</span>
     </a>
     <a class="side-nav__link row ai-c" title="CHAPITRE 3 : Les solutions et les prévisions" href="#solutions">
@@ -116,17 +114,28 @@
         </h2>
       </div>
 
-      <article class="section" id="blocked-section">
+      <article class="section blocked-section" id="blocked-section">
         <span class="section__title">
           Les moyens de transports
         </span>
-        <div id="stepped-animation" data-step="0"></div><!--graph-->
-        <div>
-          <span class="data data--big">80%</span>
-          <p>
-            Pour info, la voiture est le mode de transport quotidien le plus répandu
-          </p>
+        <div class="blocked-container" id="stepped-animation" data-step="0">
+          <div class="blocked blocked1">
+            <img src="images/voiture.png" alt="Voiture">
+            <p class="data">82%</p>
+          </div>
+          <div class="blocked blocked2">
+            <img src="images/bus.png" alt="Bus">
+            <p class="data">13%</p>
+          </div>
+          <div class="blocked blocked3">
+            <img src="images/velo.png" alt="Velo">
+            <p class="data">1%</p>
+          </div>
         </div>
+        <p class="fs-4 chap2-s1-text">
+          Pour info, la voiture est le mode de transport quotidien le plus répandu.
+          Elle est utilisée dans <span class="daa">plus de 4 tajets sur 5</span>, c'est énorme.
+        </p>
       </article>
 
       <article class="section row">
@@ -137,15 +146,15 @@
           <div class="col quizz-buttons">
             <div>
               <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport" checked />
-              <label  for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
+              <label for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les voitures</label>
             </div>
             <div>
-            <input type="radio" class="quizz-buttons__input" id="bus"  value="bus" name ="transport" checked />
-            <label  for="bus" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
+              <input type="radio" class="quizz-buttons__input" id="bus" value="bus" name="transport" checked />
+              <label for="bus" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les bus</label>
             </div>
             <div>
-              <input type="radio" class="quizz-buttons__input" id="scooters"  value="scooters"  name ="transport" checked />
-            <label for="scooters" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
+              <input type="radio" class="quizz-buttons__input" id="scooters" value="scooters" name="transport" checked />
+              <label for="scooters" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les scooters</label>
             </div>
           </div>
         </div>
@@ -179,20 +188,20 @@
         </h2>
       </div>
 
-      <article class="section row ai-c"> 
-      <div class="section__text">
-        <span class="section__title">
-          Les solutions possibles
-        </span>
-        <p class="para--top fs-4">
-          Les vélos et trottinettes électriques ? Ils sont partout maintenant,
-          et ça augmente chaque année. Quand on est jeune et qu&rsquo;on habite
-          en ville, c'est top : on évite les bouchons, on se gare facile, et on
-          arrive sans être en âge. En plus, c'est bon pour la planète.
-          <b>C'est la liberté, sans la pollution.</b>
-        </p>
+      <article class="section row ai-c">
+        <div class="section__text">
+          <span class="section__title">
+            Les solutions possibles
+          </span>
+          <p class="para--top fs-4">
+            Les vélos et trottinettes électriques ? Ils sont partout maintenant,
+            et ça augmente chaque année. Quand on est jeune et qu&rsquo;on habite
+            en ville, c'est top : on évite les bouchons, on se gare facile, et on
+            arrive sans être en âge. En plus, c'est bon pour la planète.
+            <b>C'est la liberté, sans la pollution.</b>
+          </p>
         </div>
-          <div id="s3a1" class="graph-s3a4"></div><!--graph-->
+        <div id="s3a1" class="graph-s3a4"></div><!--graph-->
       </article>
 
       <article class="section row ai-c gap-big">
@@ -200,16 +209,16 @@
           <canvas id="chart3" class=""></canvas>
         </div><!--graph-->
         <div class="section__text">
-        <span class="section__title">
-          La sobriété énergétique
-        </span>
-        <p class="para--top fs-4">
-        <b>La révolution est en marche :</b>
-        les ventes de voitures électriques ontgrimpé de 22%. Elles représentent
-        plus qu'une tendance. C'est une voie vers un transport moins polluant
-        et une conduite plus économique.
-        <b>C'est l'avenir sur quatre roues.</b>
-        </p>
+          <span class="section__title">
+            La sobriété énergétique
+          </span>
+          <p class="para--top fs-4">
+            <b>La révolution est en marche :</b>
+            les ventes de voitures électriques ontgrimpé de 22%. Elles représentent
+            plus qu'une tendance. C'est une voie vers un transport moins polluant
+            et une conduite plus économique.
+            <b>C'est l'avenir sur quatre roues.</b>
+          </p>
         </div>
       </article>
 

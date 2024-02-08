@@ -6,19 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const blockedSection = document.getElementById('blocked-section');
   const steppedAnimation = document.getElementById('stepped-animation');
   let lastScroll = 0;
+  let blocked = false;
   const options = {
     root: story,
     threshold: 0.1,
   };
 
-  let changeStep = function(ev){
+  function changeStep(ev) {
+    if (blocked) return;
+    blocked = true;
     const newStep = parseInt(steppedAnimation.dataset.step) + 1;
     steppedAnimation.dataset.step = newStep;
     blockedSection.classList.add('step' + newStep);
+    setTimeout(() => {
+      blocked = false;
+    }, 600);
     if (newStep == 3) {
-      story.style.overflowY = "scroll";
-      blockedSection.removeEventListener('wheel', changeStep);
-
+      setTimeout(() => {
+        story.style.overflowY = "scroll";
+        blockedSection.removeEventListener('wheel', changeStep);
+      }, 600);
     }
   }
 
@@ -56,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scroller.classList.add("scrolling");
     lastScroll = Date.now();
   });
+
   setInterval(() => {
     if (Date.now() - lastScroll > 25000) scroller.classList.remove("scrolling");
   }, 5000);
