@@ -13,6 +13,7 @@ main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
 }
 .section, .chapter-title__container {
@@ -47,7 +48,7 @@ main {
   overflow: hidden;
   width: 0;
   transition: width .23s ease-in-out;
-  transition-delay: .23s; 
+  transition-delay: .23s;
   color: white;
   font-weight: 500;
 }
@@ -157,7 +158,7 @@ main {
   font-weight: 700;
 }
 
-.chart-js{  
+.chart-js{
   display: block;
   width: 50%;
 }
@@ -168,4 +169,3 @@ main {
 .none{
   display: none;
 }
-
