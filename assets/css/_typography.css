@@ -43,6 +43,11 @@ h2 {
     font-weight: 500;
 }
 
+.data {
+    font-size: 4em;
+    font-weight: 700;
+}
+
 .data--big {
     font-size: 8em;
     font-weight: 700;
