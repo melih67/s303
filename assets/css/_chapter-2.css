@@ -100,3 +100,59 @@
     transform: translate(-50% , -50%);
     background-color: #ff7037;
 }
+
+@media screen and (max-width: 1270px) {
+    iframe {
+        width: 90vw;
+        height: 50vw;
+    }
+    .chap2-s1-text {
+        width: 100%;
+    }
+
+    .blocked-container {
+        right: 63vw;
+    }
+    .blocked {
+        transform: translateX(250%);
+    }
+    .blocked1 {
+        top: 25vh;
+    }
+    .blocked2 {
+        top: 50vh;
+    }
+    .blocked2>img {
+        right: 0;
+    }
+    .blocked3 {
+        top: 75vh;
+    }
+    .blocked3>img {
+        right: 0;
+    }
+    .blocked>p {
+        position: unset;
+        top: unset;
+        display: unset;
+        text-align: center;
+        margin-left: 4em;
+    }
+
+    .quizz {
+        margin: 0;
+    }
+    .quizz-buttons {
+        gap: 1em;
+        margin: 0;;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .blocked {
+        margin-top: -4em;
+    }
+    .blocked>img {
+        width: 50vw;
+    }
+}
