@@ -45,3 +45,16 @@
     width: 500px !important;
     height: 500px !important;
 }
+
+@media screen and (max-width: 1270px) {
+    .para--top {
+            width: 100%;
+    }
+    .section__text {
+        width: 100%;
+    }
+    .chart2--style {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}

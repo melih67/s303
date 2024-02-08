@@ -74,6 +74,9 @@ a{
   margin-left: 3rem;
 }
 
-input:hover{
-  cursor: pointer;
+@media screen and (max-width: 680px) {
+  .row {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }

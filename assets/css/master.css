@@ -127,6 +127,7 @@ label:hover {
   position: fixed;
   bottom: 5em;
   transition: opacity .3s ease-in-out;
+  z-index: 666;
 }
 .scrolling {
   opacity: 0;
@@ -178,6 +179,10 @@ label:hover {
 footer{
   height: 100vh;
 }
+.footer-list {
+  flex-wrap: wrap;
+  gap: 2em;
+}
 
 .img--graph{
   height: 200px;
@@ -218,4 +223,24 @@ footer{
 
 .white{
   color: white;
+}
+
+@media screen and (max-width: 1270px) {
+  .side-nav {
+    top: 2em;
+    left: 10vw;
+    width: 80vw;
+    height: .2em;
+    flex-direction: row;
+  }
+  .left {
+    margin-left: 0;
+  }
+  .section, .chapter-title__container {
+    width: 100vw;
+    padding: 2em;
+  }
+  .chart-js {
+    width: 100%;
+  }
 }
