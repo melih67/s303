@@ -17,22 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     blocked = true;
     const newStep = parseInt(steppedAnimation.dataset.step) + 1;
     steppedAnimation.dataset.step = newStep;
-<<<<<<< HEAD
     blockedSection.classList.add("step" + newStep);
-=======
-    blockedSection.classList.add('step' + newStep);
->>>>>>> f817bb8c63c617e4516c599293b1ef68dda53aaf
     setTimeout(() => {
       blocked = false;
     }, 600);
     if (newStep == 3) {
       setTimeout(() => {
         story.style.overflowY = "scroll";
-<<<<<<< HEAD
         blockedSection.removeEventListener("wheel", changeStep);
-=======
-        blockedSection.removeEventListener('wheel', changeStep);
->>>>>>> f817bb8c63c617e4516c599293b1ef68dda53aaf
       }, 600);
     }
   }
