@@ -175,10 +175,6 @@ label:hover {
 .none{
   display: none;
 }
-
-footer{
-  height: 100vh;
-}
 .footer-list {
   flex-wrap: wrap;
   gap: 2em;
