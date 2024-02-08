@@ -100,6 +100,10 @@
     transform: translate(-50% , -50%);
     background-color: #ff7037;
 }
+iframe {
+    height: 63vh;
+        width: 112vh;
+}
 
 @media screen and (max-width: 1270px) {
     iframe {
