@@ -37,3 +37,11 @@ var animation = bodymovin.loadAnimation({
   autoplay: true,
   path: "anim/s3a1/data.json",
 });
+
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("s3a2"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "anim/s3a2/data.json",
+});

@@ -1,4 +1,5 @@
 .blocked-section {
+<<<<<<< HEAD
     position: relative;
 }
 
@@ -51,6 +52,50 @@
 
 .blocked3>img {
     right: -4em;
+=======
+  position: relative;
+}
+.chap2-s1-text {
+  margin-top: 5vw;
+  width: 57%;
+  text-align: right;
+}
+.blocked-container {
+  position: absolute;
+  right: 42vw;
+}
+.blocked {
+  top: 0;
+  position: absolute;
+  transform: translateX(200%);
+  transition: transform .3s ease-in-out;
+}
+.blocked > img {
+  position: relative;
+  width: 25vw;
+}
+.blocked>p {
+  position: absolute;
+  top: 25%;
+  display: inline;
+}
+.step1 .blocked1,
+.step2 .blocked2,
+.step3 .blocked3 {
+  transform: translateX(0);
+}
+.blocked2 {
+  top: 25vh;
+}
+.blocked2 > img {
+  right: 3.5em;
+}
+.blocked3 {
+  top: 50vh;
+}
+.blocked3 > img {
+  right: -4em;
+>>>>>>> f817bb8c63c617e4516c599293b1ef68dda53aaf
 }
 
 .quizz{
@@ -73,7 +118,7 @@
     border-radius: 20px;
     background-color: transparent;
     margin-left: 1rem;
-} 
+}
 
 .quizz-buttons__input{
     appearance: none;

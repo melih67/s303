@@ -21,3 +21,16 @@
     overflow: hidden;
     width: 50rem;
 }
+
+#s3a2_text{
+    width: 30%;
+}
+
+.data{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.section_text{
+    margin: 3rem;
+}
