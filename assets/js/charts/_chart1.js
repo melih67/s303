@@ -53,9 +53,11 @@ const data = {
   ],
   datasets: [
     {
-      label: "% de voiture utilisé en fonction de la distance",
+      label: "% utilisé en fonction de la distance",
       data: dataVoiture,
       backgroundColor: colorVoiture,
+      borderColor: "#ffffff",
+      borderWidth: 3,
     },
   ],
 };
