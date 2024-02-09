@@ -9,7 +9,12 @@
 @import '_chapter-2.css';
 @import '_chapter-3.css';
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 main {
+  scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -239,6 +244,32 @@ label:hover {
     width: 80%;
     border: 1px solid #fff; /* Couleur du trait blanc */
     margin: 10px 0; /* Espacement autour du trait */
+}
+
+.scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 10px;
+  z-index: 666;
+  background: transparent;
+}
+.scrollbar__track,
+.scrollbar__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.scrollbar__track {
+  height: 100%;
+  background-color: #ccc7;
+}
+.scrollbar__thumb {
+  border-radius: 1em;
+  height: 2em;
+  background-color: white;
 }
 
 @media screen and (max-width: 1270px) {

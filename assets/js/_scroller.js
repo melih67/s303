@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (newStep == 3) {
       setTimeout(() => {
         story.style.overflowY = "scroll";
-        blockedSection.removeEventListener("wheel", changeStep);
-        article.target.removeEventListener("touchmove", changeStep);
+        window.removeEventListener("wheel", changeStep);
+        window.removeEventListener("touchmove", changeStep);
       }, 600);
     }
   }
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
       article.target.dataset.visited = "yes";
       story.style.overflowY = "hidden";
       article.target.scrollIntoView();
-      article.target.addEventListener("wheel", changeStep);
-      article.target.addEventListener("touchmove", changeStep);
+      window.addEventListener("wheel", changeStep);
+      window.addEventListener("touchmove", changeStep);
     }
   }, options);
 
@@ -69,4 +69,37 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     if (Date.now() - lastScroll > 25000) scroller.classList.remove("scrolling");
   }, 5000);
+
+  /* Custom Scrollbar */
+  const scrollbarContainer = document.getElementById('scrollbar-container');
+  const scrollbarTrack = document.getElementById('scrollbar-track');
+  const scrollbarThumb = document.getElementById('scrollbar-thumb');
+  let halfThumb = scrollbarThumb.offsetHeight / 2
+  let scrollbarElementsDiff = scrollbarContainer.clientHeight - scrollbarThumb.clientHeight;
+  let maxScroll = story.scrollHeight - story.clientHeight;
+  let startY, startScroll;
+
+  function handleScrollbarDrag(ev) {
+    ev.preventDefault();
+    startY = ev.clientY;
+    startScroll = story.scrollTop;
+
+    function scrollBar(ev) {
+        story.scrollTop = startScroll + ((ev.clientY - startY) / scrollbarContainer.clientHeight) * maxScroll;
+    }
+    function stopScrolling() {
+      window.removeEventListener('mousemove', scrollBar);
+      window.removeEventListener('mouseup', stopScrolling);
+    }
+    window.addEventListener('mousemove', scrollBar);
+    window.addEventListener('mouseup', stopScrolling);
+  }
+
+  scrollbarThumb.addEventListener('mousedown', handleScrollbarDrag);
+  scrollbarTrack.addEventListener('mousedown', (ev) => {
+    story.scrollTop = (ev.clientY - halfThumb) / scrollbarElementsDiff * maxScroll;
+  });
+  story.addEventListener('scroll', () => {
+    scrollbarThumb.style.top = story.scrollTop / maxScroll * scrollbarElementsDiff + 'px';
+  });
 });
