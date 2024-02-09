@@ -24,6 +24,7 @@ label:hover {
 .section, .chapter-title__container {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  overflow: hidden;
 }
 
 .side-nav {

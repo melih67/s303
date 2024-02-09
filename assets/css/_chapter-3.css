@@ -1,4 +1,4 @@
-.date button{
+.date>button {
     background-color: rgb(1, 226, 1);
     color: white;
     padding: 1rem;
@@ -9,10 +9,10 @@
     transition: all 0.2s ease-in-out;
 }
 
-.date button:hover{
+.date>button:hover,
+.date>.active {
     background-color: rgb(0, 137, 0);
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
 
@@ -21,6 +21,11 @@
     overflow: hidden;
     min-width: 35rem;
     max-width: 50rem;
+    transition: opacity .3s ease-in-out;
+}
+.graph-s3a4:nth-child(3) {
+    margin-top: -30rem;
+    opacity: 0;
 }
 #s3a2 {
     margin-bottom: -5em;

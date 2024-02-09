@@ -11,8 +11,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
-    defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" defer></script>
 
 </head>
 
@@ -24,8 +23,7 @@
     <a class="side-nav__link row ai-c" title="CHAPITRE 1 : Problèmes énergetiques en France" href="#problemes">
       <span class="side-nav__link-text">Problemes</span>
     </a>
-    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques"
-      href="#impacts">
+    <a class="side-nav__link row ai-c" title="CHAPITRE 2 : Les Transports et Leurs Impacts Énergétiques" href="#impacts">
       <span class="side-nav__link-text">Impacts</span>
     </a>
     <a class="side-nav__link row ai-c" title="CHAPITRE 3 : Les solutions et les prévisions" href="#solutions">
@@ -46,7 +44,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="chapter chapter--chap1" id="problemes">
@@ -144,8 +141,7 @@
           </span>
           <div class="col quizz-buttons">
             <div>
-              <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport"
-                checked />
+              <input type="radio" class="quizz-buttons__input" id="voitures" value="voitures" name="transport" checked />
               <label for="voitures" class="quizz-buttons__button text-mid">Afficher le pourcentage pour les
                 voitures</label>
             </div>
@@ -180,10 +176,7 @@
           </p>
         </div>
         <div>
-          <iframe width="1090" height="615" src="https://www.youtube.com/embed/mL4sOQPKQss?si=qOou6TIiOTIsqN3e"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe width="1090" height="615" src="https://www.youtube.com/embed/mL4sOQPKQss?si=qOou6TIiOTIsqN3e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </article>
     </section>
@@ -252,6 +245,7 @@
             </div>
             <div id="s3a2" class=""></div>
           </div>
+        </div>
       </article>
       <article class="section row ai-c">
         <div>
@@ -270,55 +264,59 @@
         </div>
         <div>
           <div class="row jc-c gap-small date">
-            <button type="button" class="actuelle"><span lass="data">2024</span></button>
-            <button type="button" class="futur"><span lass="data">2050</span></button>
+            <button type="button" class="actuelle"><span class="data">2024</span></button>
+            <button type="button" class="futur active"><span class="data">2050</span></button>
           </div>
           <div id="s3a4" class="graph-s3a4"></div>
-          <div id="s3a4-1" class="graph-s3a4 none"></div><!--graph-->
+          <div id="s3a4-1" class="graph-s3a4"></div><!--graph-->
         </div>
       </article>
     </section>
-    <footer class="section color-grey">
-      <div class="text-c">
-        <h2 class="white">Merci !</h2>
-        <h3 class="mt-3 fs-3 white">Graphiques et réalisations :</h3>
+
+    <footer class="chapter color-grey">
+      <div class="footer-container section">
+        <div class="text-c">
+          <h2 class="white">Merci !</h2>
+          <h3 class="mt-3 fs-3 white">Graphiques et réalisations :</h3>
+        </div>
+        <div class="row jc-sa footer-list">
+          <div class="image-container">
+            <img src="./images/melih-1.png" alt="Graphique réalisé" class="img--graph">
+            <hr class="image-separator">
+            <img src="./images/melih-2.png" alt="Autre image" class="img--graph">
+            <p class="mt-1">Acikoz Melih</p>
+            <a href="https://www.ecologie.gouv.fr/sites/default/files/Th%C3%A9ma%20-%20Projections%20de%20la%20demande%20de%20transport%20sur%20le%20long%20terme.pdf" target="_blank" class="link-source">Source 1</a>
+            <a href="https://www.ecologie.gouv.fr/sites/default/files/Th%C3%A9ma%20-%20Projections%20de%20la%20demande%20de%20transport%20sur%20le%20long%20terme.pdf" target="_blank" class="link-source">Source 2</a>
+          </div>
+          <div class="image-container">
+            <img src="./images/nail-1.png" alt="Graphique réalisé" class="img--graph">
+            <hr class="image-separator">
+            <img src="./images/nail-2.png" alt="Autre image" class="img--graph">
+            <p class="mt-1">AKIFI Naïl</p>
+            <a href="https://www.ecologie.gouv.fr" target="_blank" class="link-source">Source 1</a>
+            <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 2</a>
+          </div>
+          <div class="image-container">
+            <img src="./images/martin-1.png" alt="Graphique réalisé" class="img--graph">
+            <hr class="image-separator">
+            <img src="./images/martin-2.png" alt="Autre image" class="img--graph">
+            <p class="mt-1">Fratinelli Martin</p>
+            <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 1</a>
+            <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 2</a>
+          </div>
+          <div class="image-container">
+            <img src="./images/mael-1.png" alt="Graphique réalisé" class="img--graph">
+            <hr class="image-separator">
+            <p class="mt-1">Mael Garrigues</p>
+            <a href="https://fr.statista.com/statistiques/713440/nombre-velos-assistance-electrique-vendus-france/" target="_blank" class="link-source">Source 1</a>
+          </div>
+          <div class="col jc-c ai-c mt-3 white">
+            <p class="fs-4">L'expérience vous a plu ?</p>
+            <a href="#preambule" class="button-reload mt-2">Relancez</a>
+          </div>
+        </div>
       </div>
-      <div class="row jc-sa footer-list">
-        <div class="image-container">
-          <img src="./images/melih-1.png" alt="Graphique réalisé" class="img--graph">
-          <hr class="image-separator">
-          <img src="./images/melih-2.png" alt="Autre image" class="img--graph">
-          <p class="mt-1">Acikoz Melih</p>
-          <a href="https://www.ecologie.gouv.fr/sites/default/files/Th%C3%A9ma%20-%20Projections%20de%20la%20demande%20de%20transport%20sur%20le%20long%20terme.pdf" target="_blank" class="link-source">Source 1</a>
-          <a href="https://www.ecologie.gouv.fr/sites/default/files/Th%C3%A9ma%20-%20Projections%20de%20la%20demande%20de%20transport%20sur%20le%20long%20terme.pdf" target="_blank" class="link-source">Source 2</a>
-        </div>
-        <div class="image-container">
-          <img src="./images/nail-1.png" alt="Graphique réalisé" class="img--graph">
-          <hr class="image-separator">
-          <img src="./images/nail-2.png" alt="Autre image" class="img--graph">
-          <p class="mt-1">AKIFI Naïl</p>
-          <a href="https://www.ecologie.gouv.fr" target="_blank" class="link-source">Source 1</a>
-          <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 2</a>
-        </div>
-        <div class="image-container">
-          <img src="./images/martin-1.png" alt="Graphique réalisé" class="img--graph">
-          <hr class="image-separator">
-          <img src="./images/martin-2.png" alt="Autre image" class="img--graph">
-          <p class="mt-1">Fratinelli Martin</p>
-          <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 1</a>
-          <a href="https://www.statistiques.developpement-durable.gouv.fr/" target="_blank" class="link-source">Source 2</a>
-        </div>
-        <div class="image-container">
-          <img src="./images/mael-1.png" alt="Graphique réalisé" class="img--graph">
-          <hr class="image-separator">
-          <p class="mt-1">Mael Garrigues</p>
-          <a href="https://fr.statista.com/statistiques/713440/nombre-velos-assistance-electrique-vendus-france/" target="_blank" class="link-source">Source 1</a>
-        </div>
-        <div class="col jc-c ai-c mt-3 white">
-          <p class="fs-4">L'expérience vous a plu ?</p>
-          <a href="#preambule" class="button-reload mt-2">Relancez</a>
-        </div>
-        <footer>
+    </footer>
   </main>
 
   <script src="assets/js/main.js" type="module"></script>

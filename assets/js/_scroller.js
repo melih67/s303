@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         story.style.overflowY = "scroll";
         blockedSection.removeEventListener("wheel", changeStep);
+        article.target.removeEventListener("touchmove", changeStep);
       }, 600);
     }
   }
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       story.style.overflowY = "hidden";
       article.target.scrollIntoView();
       article.target.addEventListener("wheel", changeStep);
+      article.target.addEventListener("touchmove", changeStep);
     }
   }, options);
 
