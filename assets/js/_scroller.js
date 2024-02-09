@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     threshold: 0.1,
   };
 
-  function changeStep(ev) {
+  function changeStep() {
     if (blocked) return;
     blocked = true;
     const newStep = parseInt(steppedAnimation.dataset.step) + 1;

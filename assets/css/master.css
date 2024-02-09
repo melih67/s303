@@ -9,12 +9,7 @@
 @import '_chapter-2.css';
 @import '_chapter-3.css';
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 main {
-  scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -289,5 +284,15 @@ label:hover {
   }
   .chart-js {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1270px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  main {
+    scrollbar-width: none;
   }
 }
